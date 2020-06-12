@@ -35,6 +35,8 @@ const UL = styled.ul`
 `;
 
 const Hr = styled.hr`
+  display: ${({ open }) => (open ? "" : "none")};
+
   backgroundcolor: #ebebeb;
   color: #ebebeb;
   bordercolor: #ebebeb;
@@ -44,6 +46,8 @@ const Hr = styled.hr`
 `;
 
 const LogoutSpan = styled.span`
+  display: ${({ open }) => (open ? "" : "none")};
+
   padding-top: 15px;
   padding-left: 18px;
 
@@ -64,11 +68,12 @@ const LogoutSpan = styled.span`
 const Profile = styled.div`
   height: 111px;
 
+  display: ${({ open }) => (open ? "" : "none")};
+
   .photo {
     float: left;
     height: 66px;
     weight: 66px;
-    z-index: 10;
     border-radius: 50%;
   }
   img {
@@ -117,7 +122,7 @@ const Profile = styled.div`
 const RightNav = ({ open }) => {
   return (
     <UL open={open}>
-      <Profile>
+      <Profile open={open}>
         <span className="photo">
           <img src="/img_profile.png" />
         </span>
@@ -125,14 +130,14 @@ const RightNav = ({ open }) => {
         <span className="hello">반갑습니다!</span>
       </Profile>
 
-      <Hr />
+      <Hr open={open} />
       <li>최근기부</li>
       <li>기부하러 가기</li>
       <li>마이페이지</li>
       <li>기부후기</li>
       <li>메뉴</li>
-      <Hr />
-      <LogoutSpan>로그아웃</LogoutSpan>
+      <Hr open={open} />
+      <LogoutSpan open={open}>로그아웃</LogoutSpan>
     </UL>
   );
 };
