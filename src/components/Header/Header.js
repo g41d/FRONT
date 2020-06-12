@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #4e7eff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     .logo {
       font-size: 22px;
@@ -30,7 +30,9 @@ const StyledDiv = styled.div`
 const Header = () => (
   <StyledDiv>
     <div className="fixed-div">
-      <div className="logo">Nav Bar</div>
+      <div className="logo">
+        <img src="/kind_funding.png" alt="header logo" />
+      </div>
       <Burger />
     </div>
   </StyledDiv>
