@@ -1,19 +1,17 @@
-import React from 'react';
-import styled from "styled-components";
+import React from "react";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import GlobalStyles from "./components/GlobalStyles";
 import Header from './components/Header/Header';
-
-const SytledDiv=styled.div`
-  font-size:24px;
-  font-weight:bold;
-`;
+import IndexPage from "./pages/IndexPage";
 
 function App() {
   return (
-    <SytledDiv>
+    <Router>
+      <GlobalStyles />
       <Header />
-      KindFunding
+      <Route exact path="/" component={IndexPage} />
+    </Router>
 
-    </SytledDiv>
   );
 }
 
