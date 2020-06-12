@@ -53,7 +53,8 @@ function IndexPage() {
     <div>
       <Banner Components={banners} />
       <Category
-        title={"최근 기부"}
+        href="/more/recent"
+        title={"기부하기"}
         infos={[
           {
             idx: 1,
@@ -87,7 +88,8 @@ function IndexPage() {
         ]}
       />
       <Category
-        title={"완료 후기"}
+        href="/more/complete"
+        title={"모금후기"}
         infos={[
           {
             idx: 5,
