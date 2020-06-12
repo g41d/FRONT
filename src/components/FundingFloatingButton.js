@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AnchorStyle = {
   position: "fixed",
-  bottom: "10px",
+  bottom: "60px",
   right: "10px",
 };
 
