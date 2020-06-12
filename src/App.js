@@ -4,6 +4,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header/Header";
 import IndexPage from "./pages/IndexPage";
 import FundingDetail from "./pages/FundingDetail";
+import MoreList from "./pages/MoreList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Route exact path="/" component={IndexPage} />
       <Route exact path="/detail/:idx" component={FundingDetail} />
+      <Route exact path="/more/:type" component={MoreList} />
     </Router>
   );
 }

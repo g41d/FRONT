@@ -47,7 +47,7 @@ const PorgressDiv = styled.div`
       width: ${({ progress }) => progress}%;
       height: 4px;
       border-radius: 2px;
-      background-color: #4880ff;
+      background-color: ${({ complete }) => (complete ? "#c4c4c4" : "#4e7eff")};
     }
   }
   .text {
@@ -55,12 +55,12 @@ const PorgressDiv = styled.div`
     font-size: 14px;
     font-weight: bold;
     line-height: 1.43;
-    color: #4880ff;
+    color: ${({ complete }) => (complete ? "#313131" : "#4e7eff")};
   }
 `;
 
-const ProgressBar = ({ progress }) => (
-  <PorgressDiv progress={progress}>
+const ProgressBar = ({ progress, complete }) => (
+  <PorgressDiv progress={progress} complete={complete}>
     <div className="bar">
       <div></div>
     </div>
@@ -68,7 +68,15 @@ const ProgressBar = ({ progress }) => (
   </PorgressDiv>
 );
 
-function Card({ idx, src, title, institution, progress, isImminent }) {
+function Card({
+  idx,
+  src,
+  title,
+  institution,
+  progress,
+  complete,
+  isImminent,
+}) {
   return (
     <StyledLi>
       <Link to={`/detail/${idx}`} className="more-anchor">
@@ -76,7 +84,7 @@ function Card({ idx, src, title, institution, progress, isImminent }) {
         {isImminent && <span className="imminent">마감임박</span>}
         <div className="title">{title}</div>
         <div className="institution">{institution}</div>
-        <ProgressBar progress={progress} />
+        <ProgressBar progress={progress} complete={complete} />
       </Link>
     </StyledLi>
   );

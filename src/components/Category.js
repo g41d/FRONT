@@ -36,18 +36,20 @@ const StyledDiv = styled.div`
   }
 `;
 
-function Category({ title, infos }) {
+function Category({ href, title, infos, complete = false }) {
   return (
     <StyledDiv>
       <div className="title-wrapper">
         <span className="title">{title}</span>
-        <Link to="/more" className="more-anchor">
-          더보기
-        </Link>
+        {href && (
+          <Link className="more-anchor" to={href}>
+            더보기
+          </Link>
+        )}
       </div>
       <div className="card-list">
         {infos.map((info, i) => (
-          <Card key={i} {...info} />
+          <Card complete={complete} key={i} {...info} />
         ))}
       </div>
     </StyledDiv>
