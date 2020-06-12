@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   *{
       box-sizing:border-box;
       letter-spacing: -0.32px;
+      color:#313131;
   }
   
   @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
