@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="79" viewBox="0 0 79 79">
+    <defs>
+        <filter id="prefix__타원_545" width="79" height="79" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="prefix__btn_donate" transform="translate(-292 -722)">
+        <g filter="url(#prefix__타원_545)" transform="translate(292 722)">
+            <circle id="prefix__타원_545-2" cx="30.5" cy="30.5" r="30.5" fill="#4e7eff" data-name="타원 545" transform="translate(6 6)"/>
+        </g>
+        <text id="prefix__기부하기" fill="#fff" font-family="NotoSansKR-Bold, Noto Sans KR" font-size="10px" font-weight="700" transform="translate(310 776)">
+            <tspan x="0" y="0">기부하기</tspan>
+        </text>
+        <path id="prefix__패스_12829" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M136.3 130.076c-3.61-4.968-10.714-2.037-10.714 3.007 0-5.045-7.105-7.976-10.715-3.008-3.73 5.135-.053 14.133 10.715 19.3 10.764-5.167 14.442-14.164 10.714-19.299z" data-name="패스 12829" transform="translate(202.49 613.593)"/>
+    </g>
+</svg>
