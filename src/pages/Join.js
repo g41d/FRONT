@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import * as api from "../api";
 
 const StyledDiv = styled.div`
   padding: 35px 46px;
@@ -69,6 +70,25 @@ const StyledDiv = styled.div`
 
 function Join() {
   const [type, setType] = useState(0);
+  const [data, setData] = useState({
+    id: "",
+    oldPw: "",
+    pw: "",
+    nickname: "",
+    email: "",
+    phone: "",
+  });
+  const handleSubmit = () => {
+    if (
+      data.id !== "" &&
+      data.oldPw === data.pw &&
+      data.nickname !== "" &&
+      data.email !== "" &&
+      data.phone !== ""
+    ) {
+      const res = api.register(data);
+    }
+  };
   return (
     <StyledDiv>
       <div className="title">회원가입</div>
@@ -82,12 +102,24 @@ function Join() {
       </div>
       <div className="input-category">
         <div>아이디</div>
-        <input type="text" placeholder="아이디를 입력해 주세요." />
+        <input
+          onChange={(e) => setData({ ...data, id: e.target.value })}
+          value={data.id}
+          type="text"
+          placeholder="아이디를 입력해 주세요."
+        />
       </div>
       <div className="input-category">
         <div>비밀번호</div>
-        <input type="password" placeholder="비밀번호를 입력해 주세요." />
         <input
+          onChange={(e) => setData({ ...data, oldPw: e.target.value })}
+          value={data.oldPw}
+          type="password"
+          placeholder="비밀번호를 입력해 주세요."
+        />
+        <input
+          onChange={(e) => setData({ ...data, pw: e.target.value })}
+          value={data.pw}
           type="password"
           placeholder="비밀번호를 한번 더 입력해 주세요."
         />
@@ -101,19 +133,36 @@ function Join() {
         <>
           <div className="input-category">
             <div>닉네임</div>
-            <input type="text" placeholder="닉네임을 입력해 주세요." />
+            <input
+              onChange={(e) => setData({ ...data, nickname: e.target.value })}
+              value={data.nickname}
+              type="text"
+              placeholder="닉네임을 입력해 주세요."
+            />
           </div>
           <div className="input-category">
             <div>이메일</div>
-            <input type="text" placeholder="이메일을 입력해 주세요." />
+            <input
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+              value={data.email}
+              type="email"
+              placeholder="이메일을 입력해 주세요."
+            />
           </div>
           <div className="input-category">
             <div>핸드폰번호</div>
-            <input type="text" placeholder="핸드폰번호를 입력해 주세요." />
+            <input
+              onChange={(e) => setData({ ...data, phone: e.target.value })}
+              value={data.phone}
+              type="text"
+              placeholder="핸드폰번호를 입력해 주세요."
+            />
           </div>
         </>
       )}
-      <button className="confirm disable">완료</button>
+      <button onClick={() => handleSubmit()} className="confirm disable">
+        완료
+      </button>
     </StyledDiv>
   );
 }
