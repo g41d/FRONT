@@ -4,95 +4,33 @@ import styled from "styled-components";
 const FooterDiv = styled.div`
   height: 57px;
   background-color: #313131;
-  margin-top: 15px;
-  position: relative;
+  color: #aaa;
+  display: flex;
+  align-items: center;
 
-  .kflogo {
-    position: absolute;
-    left: 18px;
-    top: 18px;
-    bottom: 17px;
-
-    width: 139px;
-    height: 22px;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.22;
-    letter-spacing: -0.36px;
-    text-align: left;
-    color: white;
+  img {
+    flex: 1;
+    margin-left: 16px;
   }
 
-  .company {
-    position: absolute;
-    left: 202px;
-    top: 21px;
-    bottom: 19px;
-
-    width: 48px;
-    height: 18px;
-    font-family: NotoSansKR;
+  .links {
+    flex: 2;
     font-size: 12px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.5;
-    letter-spacing: normal;
-    text-align: right;
-    color: #c4c4c4;
-  }
-
-  .faq {
-    position: absolute;
-    left: 264px;
-    top: 21px;
-    bottom: 19px;
-
-    width: 37px;
-    height: 18px;
-    font-family: NotoSansKR;
-    font-size: 12px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    text-align: right;
-    color: #c4c4c4;
-  }
-
-  .help {
-    position: absolute;
-    left: 319px;
-    top: 21px;
-    bottom: 19px;
-
-    width: 48px;
-    height: 18px;
-    font-family: NotoSansKR;
-    font-size: 12px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    text-align: right;
-    color: #c4c4c4;
+    display: flex;
+    justify-content: space-around;
   }
 `;
 
 const Footer = () => (
   <FooterDiv>
-    <span className="kflogo">KIND FUNDING</span>
-
-    <span className="flexContainer"></span>
-
-    <span className="company">회사소개</span>
-    <span className="faq">도움말</span>
-    <span className="help">문의하기</span>
+    <img src="/footer_title.svg" alt="푸터 로고" />
+    <div className="links">
+      <span>회사소개</span>
+      <span>도움말</span>
+      <span>문의하기</span>
+    </div>
   </FooterDiv>
 );
 
