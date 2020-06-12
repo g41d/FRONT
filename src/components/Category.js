@@ -43,8 +43,8 @@ function Category({ title, infos }) {
         </a>
       </div>
       <div className="card-list">
-        {infos.map((info) => (
-          <Card {...info} />
+        {infos.map((info, i) => (
+          <Card key={i} {...info} />
         ))}
       </div>
     </StyledDiv>

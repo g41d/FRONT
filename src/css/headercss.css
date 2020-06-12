@@ -1,21 +1,9 @@
-.navStyle {
-    width: 100%;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.logo {
-    margin-bottom:5px;
-}
-
 ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 li {
-    line-height: 55px;
+  line-height: 55px;
 }

@@ -9,7 +9,6 @@ function Banner({ Components }) {
       clickable: true,
     },
   };
-  console.log(Components);
   return (
     <Swiper {...bannerStyle}>
       {Components.map((Component, i) => (
