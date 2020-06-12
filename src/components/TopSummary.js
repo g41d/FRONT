@@ -59,7 +59,7 @@ const FrontPack = styled.div`
   display: table-cell;
   position: relative;
   top: 46px;
-  z-index: 10;
+  z-index: 1;
   text-align: center;
   vertical-align: middle;
 `;
