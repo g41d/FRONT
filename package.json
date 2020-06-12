@@ -16,8 +16,6 @@
     "styled-components": "^5.1.1",
     "styled-reset": "^4.1.6",
     "swiper": "^5.4.2"
-    "react-hamburger-menu": "^1.2.1",
-    "react-test-renderer": "^5.2.0",
   },
   "scripts": {
     "start": "react-scripts start",
