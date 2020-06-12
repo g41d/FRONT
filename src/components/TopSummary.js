@@ -32,9 +32,34 @@ const ContDiv = styled.div`
   }
 `;
 
+const Shipping = styled.span`
+  position: absolute;
+  z-index: 3;
+  width: 77px;
+  height: 24px;
+  border-radius: 18px;
+  background-color: #f76464;
+  text-align: center;
+  padding-top: 4px;
+
+  left: calc(50% - 38.5px);
+  top: 8%;
+
+  font-family: NotoSansKR;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+`;
+
 const FrontPack = styled.div`
   display: table-cell;
   position: relative;
+  top: 46px;
   z-index: 10;
   text-align: center;
   vertical-align: middle;
@@ -47,13 +72,12 @@ const Logo = styled.span`
   object-fit: contain;
   img {
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
   }
 `;
 
 const H4 = styled.h4`
   width: auto;
-  margin-bottom: 9px;
   font-size: 22px;
   color: white;
   font-family: NotoSansKR-Bold;
@@ -65,22 +89,23 @@ const H4 = styled.h4`
 `;
 
 const Sponsor = styled.span`
-  padding-top: 7px;
   height: 15px;
   font-family: NotoSansKR;
   font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.2;
   letter-spacing: normal;
   text-align: left;
   color: #c4c4c4;
 `;
 
-const TopSummary = () => {
+const TopSummary = ({ isShipping = true }) => {
   return (
     <WrapDiv>
+      {isShipping && <Shipping>전달중</Shipping>}
+
       <ContDiv>
         <FrontPack>
           <Logo>
