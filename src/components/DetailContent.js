@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
   .date {
     font-weight: normal;
     line-height: 1.43;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
   }
   .institutions {
     background-color: #f7f7f7;
@@ -49,7 +49,7 @@ const StyledDiv = styled.div`
     }
   }
   .recommend-list {
-    margin: 16px 0 32px;
+    margin: 46px 0 32px;
     overflow-x: auto;
     white-space: nowrap;
     .card {
@@ -59,7 +59,7 @@ const StyledDiv = styled.div`
         position: relative;
         img {
           border-radius: 4px;
-          width: 44vw;
+          width: 45vw;
         }
         div {
           border-radius: 4px;
@@ -80,6 +80,9 @@ const StyledDiv = styled.div`
         color: #c4c4c4;
       }
     }
+    .card:nth-child(1) {
+      margin: 0;
+    }
   }
 `;
 
@@ -97,9 +100,13 @@ const TextContent = styled.div`
   }
 `;
 const Progress = styled.div`
-  margin: 16px 0;
+  margin: 25px 0 16px;
   color: #313131;
-  .text > span {
+  .text {
+    display: flex;
+    align-items: center;
+  }
+  .text > span:nth-child(2) {
     font-size: 22px;
     font-weight: bold;
     line-height: 0.91;
@@ -151,7 +158,8 @@ function DetailContent() {
       />
       <Progress progress={60}>
         <div className="text">
-          진행률<span>{60}%</span>
+          <span>진행률</span>
+          <span>{60}%</span>
         </div>
         <div className="bar">
           <div></div>

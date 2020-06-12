@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import IndexPage from "./pages/IndexPage";
 import FundingDetail from "./pages/FundingDetail";
 import MoreList from "./pages/MoreList";
+import Join from "./pages/Join";
 import Footer from "./components/Footer";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route exact path="/" component={IndexPage} />
       <Route exact path="/detail/:idx" component={FundingDetail} />
       <Route exact path="/more/:type" component={MoreList} />
+      <Route exact path="/join" component={Join} />
       <Footer />
     </Router>
   );

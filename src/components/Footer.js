@@ -14,6 +14,9 @@ const FooterDiv = styled.div`
   }
 
   .links {
+    span {
+      color: #aaaaaa;
+    }
     flex: 2;
     font-size: 12px;
     font-weight: 500;
