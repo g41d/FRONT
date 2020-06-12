@@ -56,6 +56,7 @@ function IndexPage() {
         title={"최근 기부"}
         infos={[
           {
+            idx: 1,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
@@ -63,18 +64,21 @@ function IndexPage() {
             isImminent: true,
           },
           {
+            idx: 2,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
             progress: 80,
           },
           {
+            idx: 3,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
             progress: 10,
           },
           {
+            idx: 4,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
@@ -86,6 +90,7 @@ function IndexPage() {
         title={"완료 후기"}
         infos={[
           {
+            idx: 5,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
@@ -93,6 +98,7 @@ function IndexPage() {
             isImminent: true,
           },
           {
+            idx: 6,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
@@ -100,12 +106,14 @@ function IndexPage() {
             isImminent: true,
           },
           {
+            idx: 7,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
             progress: 10,
           },
           {
+            idx: 8,
             src: process.env.PUBLIC_URL + "/hunger.jpeg",
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",

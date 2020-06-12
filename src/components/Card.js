@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const StyledAnchor = styled.a`
+const StyledLi = styled.li`
   text-decoration: none;
   color: #313131;
   display: inline-block;
@@ -12,11 +13,11 @@ const StyledAnchor = styled.a`
     border-radius: 15px;
   }
   .imminent {
-    color: #fff;
-    font-size: 11px;
-    background-color: #444;
-    border-radius: 12px;
-    padding: 3px 8px;
+    color: #4e7eff;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 4px 8px;
     position: absolute;
     top: 8px;
     left: 8px;
@@ -42,14 +43,14 @@ const PorgressDiv = styled.div`
       width: ${({ progress }) => progress}%;
       height: 6px;
       border-radius: 4px;
-      background-color: #f5cccc;
+      background-color: #4880ff;
     }
   }
   .text {
+    color: #4880ff;
     padding-right: 5px;
     float: right;
     font-size: 18px;
-    font-weight: bold;
   }
 `;
 
@@ -62,15 +63,17 @@ const ProgressBar = ({ progress }) => (
   </PorgressDiv>
 );
 
-function Card({ index, src, title, institution, progress, isImminent }) {
+function Card({ idx, src, title, institution, progress, isImminent }) {
   return (
-    <StyledAnchor href={"/detail/index"}>
-      <img src={src} alt={title} />
-      {isImminent && <span className="imminent">마감임박</span>}
-      <div className="title">{title}</div>
-      <div className="institution">{institution}</div>
-      <ProgressBar progress={progress} />
-    </StyledAnchor>
+    <StyledLi>
+      <Link to={`/detail/${idx}`} className="more-anchor">
+        <img src={src} alt={title} />
+        {isImminent && <span className="imminent">마감임박</span>}
+        <div className="title">{title}</div>
+        <div className="institution">{institution}</div>
+        <ProgressBar progress={progress} />
+      </Link>
+    </StyledLi>
   );
 }
 
