@@ -10,25 +10,29 @@ const StyledLi = styled.li`
   position: relative;
   img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 4px;
   }
   .imminent {
-    color: #4e7eff;
-    font-size: 12px;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #4e7eff;
     padding: 4px 8px;
     position: absolute;
     top: 8px;
     left: 8px;
   }
   .title {
-    padding: 5px;
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #313131;
+    margin-bottom: 5px;
   }
   .institution {
-    font-size: 14px;
-    padding: 0 5px;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 2;
     color: #c4c4c4;
   }
 `;
@@ -36,21 +40,22 @@ const PorgressDiv = styled.div`
   .bar {
     background-color: #ebebeb;
     display: inline-block;
-    width: calc(100% - 60px);
-    height: 6px;
-    border-radius: 4px;
+    width: calc(100% - 45px);
+    height: 4px;
+    border-radius: 2px;
     div {
       width: ${({ progress }) => progress}%;
-      height: 6px;
-      border-radius: 4px;
+      height: 4px;
+      border-radius: 2px;
       background-color: #4880ff;
     }
   }
   .text {
-    color: #4880ff;
-    padding-right: 5px;
     float: right;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.43;
+    color: #4880ff;
   }
 `;
 

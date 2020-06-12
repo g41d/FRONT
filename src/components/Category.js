@@ -11,13 +11,15 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     .title {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: bold;
+      line-height: 1.45;
+      color: #313131;
     }
     .more-anchor {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 500;
-      text-decoration: none;
+      line-height: 1.67;
       color: #c4c4c4;
     }
   }
