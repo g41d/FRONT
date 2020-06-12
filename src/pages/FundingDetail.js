@@ -4,7 +4,6 @@ import TopSummary from "../components/TopSummary";
 
 function FundingDetail() {
   let { idx } = useParams();
-  console.log(idx);
   return (
     <div>
       <TopSummary />

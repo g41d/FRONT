@@ -125,8 +125,6 @@ const data = {
 
 function FundingDetail() {
   let { type } = useParams();
-  console.log(type);
-  console.log(data[type]);
   return (
     <Category
       title={type === "complete" ? "모금후기" : "기부하기"}

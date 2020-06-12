@@ -14,6 +14,7 @@ const ContDiv = styled.div`
   background-repeat: no-repeat;
   position: relative;
   background-position: 50% 50%;
+  background-size: cover;
   background-image: url("https://mud-kage.kakaocdn.net/dn/brzToS/btqEj6OrUCU/cvTd2kQfeAGjdAHsdbkjzK/c360.jpg");
   &::after {
     position: absolute;
