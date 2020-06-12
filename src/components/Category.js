@@ -36,7 +36,7 @@ const StyledDiv = styled.div`
   }
 `;
 
-function Category({ href, title, infos }) {
+function Category({ href, title, infos, complete = false }) {
   return (
     <StyledDiv>
       <div className="title-wrapper">
@@ -49,7 +49,7 @@ function Category({ href, title, infos }) {
       </div>
       <div className="card-list">
         {infos.map((info, i) => (
-          <Card key={i} {...info} />
+          <Card complete={complete} key={i} {...info} />
         ))}
       </div>
     </StyledDiv>

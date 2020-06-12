@@ -53,7 +53,7 @@ function IndexPage() {
     <div>
       <Banner Components={banners} />
       <Category
-        href="/more/recent"
+        href="/more/funding"
         title={"기부하기"}
         infos={[
           {
@@ -90,6 +90,7 @@ function IndexPage() {
       <Category
         href="/more/complete"
         title={"모금후기"}
+        complete={true}
         infos={[
           {
             idx: 5,
@@ -97,7 +98,6 @@ function IndexPage() {
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
             progress: 50,
-            isImminent: true,
           },
           {
             idx: 6,
@@ -105,7 +105,6 @@ function IndexPage() {
             title: "의료진에게 힘을 보태주세요!",
             institution: "아주대학교병원",
             progress: 80,
-            isImminent: true,
           },
           {
             idx: 7,
