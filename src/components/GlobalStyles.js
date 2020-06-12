@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   }
   *{
       box-sizing:border-box;
+      letter-spacing: -0.32px;
   }
   
   @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
@@ -21,6 +22,9 @@ const GlobalStyles = createGlobalStyle`
   body{
       font-family:'Noto Sans KR', sans-serif;
       font-size: 14px;
+  }
+  ul,ol,li{
+      list-style:none;
   }
 `;
 export default GlobalStyles;
