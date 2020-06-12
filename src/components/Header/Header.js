@@ -1,5 +1,6 @@
 import React from "react";
 import Burger from "./Burger";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -30,9 +31,11 @@ const StyledDiv = styled.div`
 const Header = () => (
   <StyledDiv>
     <div className="fixed-div">
-      <div className="logo">
-        <img src="/kind_funding.png" alt="header logo" />
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <img src="/kind_funding.png" alt="header logo" />
+        </div>
+      </Link>
       <Burger />
     </div>
   </StyledDiv>
