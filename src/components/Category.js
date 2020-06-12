@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 
 const StyledDiv = styled.div`
   margin-top: 20px;
@@ -8,15 +9,17 @@ const StyledDiv = styled.div`
     display: flex;
     padding: 10px 20px;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     .title {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: bold;
+      line-height: 1.45;
+      color: #313131;
     }
     .more-anchor {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
-      text-decoration: none;
+      line-height: 1.67;
       color: #c4c4c4;
     }
   }
@@ -38,9 +41,9 @@ function Category({ title, infos }) {
     <StyledDiv>
       <div className="title-wrapper">
         <span className="title">{title}</span>
-        <a className="more-anchor" href="#">
+        <Link to="/more" className="more-anchor">
           더보기
-        </a>
+        </Link>
       </div>
       <div className="card-list">
         {infos.map((info, i) => (
